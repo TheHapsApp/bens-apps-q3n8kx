@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Keep this page off Google so it stays our secret -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ben's Apps</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --p1: #ff5fa2;
+      --p2: #ffd23f;
+      --p3: #3fd0ff;
+      --p4: #8a5cff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-user-select: none; user-select: none; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Comic Sans MS", "Trebuchet MS", system-ui, sans-serif;
+      min-height: 100vh;
+      color: #fff;
+      text-align: center;
+      background: linear-gradient(120deg, var(--p4), var(--p1), var(--p2), var(--p3));
+      background-size: 400% 400%;
+      animation: flow 14s ease infinite;
+      padding: 30px 16px 60px;
+    }
+    @keyframes flow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    h1 {
+      font-size: clamp(2rem, 8vw, 3.6rem);
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      animation: pop 2.5s ease-in-out infinite;
+    }
+    @keyframes pop {
+      0%, 100% { transform: scale(1) rotate(-1deg); }
+      50%      { transform: scale(1.04) rotate(1deg); }
+    }
+    .sub { font-size: clamp(1rem, 3.5vw, 1.3rem); margin: 8px 0 34px; text-shadow: 1px 1px 0 rgba(0,0,0,0.15); }
+
+    /* ---- App grid: looks like a phone home screen ---- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 26px 16px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    a.app, div.app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #fff;
+    }
+    .icon {
+      width: 84px;
+      height: 84px;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.6rem;
+      background: rgba(255,255,255,0.24);
+      border: 4px solid #fff;
+      box-shadow: 0 6px 0 rgba(0,0,0,0.2);
+      transition: transform 0.12s ease, background 0.12s ease;
+    }
+    a.app:active .icon { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,0.2); }
+    a.app:hover .icon { transform: translateY(-4px) scale(1.05); background: rgba(255,255,255,0.36); }
+    .label {
+      font-size: 0.95rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    }
+
+    /* Locked / coming-soon app icon */
+    .app.locked .icon {
+      background: rgba(255,255,255,0.1);
+      border-style: dashed;
+      opacity: 0.75;
+    }
+    .app.locked .label { opacity: 0.75; }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>📱 Ben's Apps 📱</h1>
+  <p class="sub">Tap an app to launch it!</p>
+
+  <div class="grid">
+    <!-- ==== APPS GO HERE — copy an <a class="app"> block to add a new one ==== -->
+
+    <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/">
+      <div class="icon">💥</div>
+      <div class="label">Blastroid</div>
+    </a>
+
+    <!-- Coming soon placeholder — swap this <div class="app locked"> for an
+         <a class="app" href="..."> once the Money Counter app is live -->
+    <div class="app locked">
+      <div class="icon">🔒</div>
+      <div class="label">Money Counter</div>
+    </div>
+
+    <!-- ==== END APPS ==== -->
+  </div>
+
+  <footer>Ben's private app collection 🚀</footer>
+</body>
+</html>

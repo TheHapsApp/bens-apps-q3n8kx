@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Keep this page off Google so it stays our secret -->
   <meta name="robots" content="noindex, nofollow">
-  <title>Ben's Apps</title>
+  <title>The Kids' Apps</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E">
   <style>
     :root {
@@ -42,13 +42,26 @@
     }
     .sub { font-size: clamp(1rem, 3.5vw, 1.3rem); margin: 8px 0 34px; text-shadow: 1px 1px 0 rgba(0,0,0,0.15); }
 
+    section.kid { max-width: 720px; margin: 0 auto 46px; }
+    .kid-name {
+      display: inline-block;
+      font-size: clamp(1.3rem, 5vw, 1.9rem);
+      font-weight: bold;
+      padding: 6px 26px;
+      border-radius: 999px;
+      border: 3px solid #fff;
+      margin-bottom: 22px;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    }
+    .kid.ben    .kid-name { background: rgba(63,208,255,0.35); }
+    .kid.hazel  .kid-name { background: rgba(255,95,162,0.35); }
+    .kid.oliver .kid-name { background: rgba(255,210,63,0.35); }
+
     /* ---- App grid: looks like a phone home screen ---- */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
       gap: 26px 16px;
-      max-width: 640px;
-      margin: 0 auto;
     }
     a.app, div.app {
       display: flex;
@@ -88,32 +101,84 @@
     .app.locked .label { opacity: 0.75; }
 
     footer {
-      margin-top: 50px;
+      margin-top: 20px;
       font-size: 0.85rem;
       opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <h1>📱 Ben's Apps 📱</h1>
-  <p class="sub">Tap an app to launch it!</p>
+  <h1>🚀 The Kids' Apps 🚀</h1>
+  <p class="sub">Pick your name, then tap an app!</p>
 
-  <div class="grid">
-    <!-- ==== APPS GO HERE — copy an <a class="app"> block to add a new one ==== -->
+  <!-- ==== BEN ==== -->
+  <section class="kid ben">
+    <div class="kid-name">💥 Ben</div>
+    <div class="grid">
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/">
+        <div class="icon">💥</div>
+        <div class="label">Blastroid</div>
+      </a>
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/calendar.html">
+        <div class="icon">📅</div>
+        <div class="label">Ben's Calendar</div>
+      </a>
+      <a class="app" href="https://thehaps.app/moneycounter-j4m9qz/">
+        <div class="icon">💰</div>
+        <div class="label">Money Counter</div>
+      </a>
+      <!-- add new Ben apps here -->
+    </div>
+  </section>
 
-    <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/">
-      <div class="icon">💥</div>
-      <div class="label">Blastroid</div>
-    </a>
+  <!-- ==== HAZEL ==== -->
+  <section class="kid hazel">
+    <div class="kid-name">🌟 Hazel</div>
+    <div class="grid">
+      <a class="app" href="https://thehaps.app/hazels-world-k9m4r2/">
+        <div class="icon">🌟</div>
+        <div class="label">Hazel's Fun Games</div>
+      </a>
+      <!-- add new Hazel apps here -->
+    </div>
+  </section>
 
-    <a class="app" href="https://thehaps.app/moneycounter-j4m9qz/">
-      <div class="icon">💰</div>
-      <div class="label">Money Counter</div>
-    </a>
+  <!-- ==== OLIVER ==== -->
+  <section class="kid oliver">
+    <div class="kid-name">🎮 Oliver</div>
+    <div class="grid">
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/burger.html">
+        <div class="icon">🍔</div>
+        <div class="label">Build-A-Burger</div>
+      </a>
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/chickenmeal.html">
+        <div class="icon">🐔</div>
+        <div class="label">Chicken Meal</div>
+      </a>
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/restaurant.html">
+        <div class="icon">🍽️</div>
+        <div class="label">Cozy Restaurant</div>
+      </a>
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/food.html">
+        <div class="icon">🍟</div>
+        <div class="label">Snack Shack</div>
+      </a>
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/quest.html">
+        <div class="icon">🛣️</div>
+        <div class="label">Snack Quest</div>
+      </a>
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/frenchtoast.html">
+        <div class="icon">🍞</div>
+        <div class="label">Toast Stacker</div>
+      </a>
+      <a class="app" href="https://thehaps.app/bens-clubhouse-zzzn83/robot.html">
+        <div class="icon">🤖</div>
+        <div class="label">Robot Voice</div>
+      </a>
+      <!-- add new Oliver apps here -->
+    </div>
+  </section>
 
-    <!-- ==== END APPS ==== -->
-  </div>
-
-  <footer>Ben's private app collection 🚀</footer>
+  <footer>The kids' private app collection 🚀</footer>
 </body>
 </html>
